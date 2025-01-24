@@ -28,7 +28,7 @@ class Database
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                 ]);
             } catch (PDOException $e) {
-                throw new PDOException('Database connection failed: ' . $e->getMessage());
+                throw new Exception('Database connection failed: ' . $e->getMessage());
             }
         }
 
